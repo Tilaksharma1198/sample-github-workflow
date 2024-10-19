@@ -3,13 +3,14 @@ name: "Hello world workflow"
 # triger the workflow on push some to masterbranch
 on:
   push:
-    branch:
-     -master
-     -production
+    branches: 
+     - master
+     - production
 
 jobs:
   hello_world:
     runs-on: ubuntu-latest
     steps:
-      -name: "print hello world"
-      run: echo "hello world"
+      - name: "print hello world"
+        run: echo "hello world"
+
